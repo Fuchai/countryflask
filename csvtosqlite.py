@@ -64,6 +64,8 @@ def parse_and_make(csvfile):
             redline = line.strip()
             redline = redline.split("|")
             execute_insert(c,tblname,redline)
+    conn.commit()
+    conn.close()
 
 
 if __name__=="__main__":
